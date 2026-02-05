@@ -2,10 +2,22 @@
 
 Run the delivery vs payments reconciliation script. If you don't pass file paths, the embedded sample data will be used.
 
-Install:
+Install (recommended virtual environment):
 
 ```bash
+# create venv and activate (POSIX)
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
+```
+
+Or using `pyproject.toml` with editable install:
+
+```bash
+# after activating venv
+python3 -m pip install --upgrade pip
+python3 -m pip install -e .
 ```
 
 Run with samples:

@@ -1,0 +1,19 @@
+[project]
+name = "project-chimera"
+version = "0.1.0"
+description = "Reconciliation tools and architecture notes for Project Chimera"
+authors = [ { name="Tenx Team", email="dev@tenx.example" } ]
+readme = "README_RECONCILE.md"
+requires-python = ">=3.10"
+
+[project.dependencies]
+pandas = "^1.4"
+matplotlib = "^3.5"
+Pillow = "^9.0"
+
+[project.scripts]
+reconcile = "scripts.reconcile:main"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
