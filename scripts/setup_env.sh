@@ -37,7 +37,9 @@ fi
 
 if [ -f pyproject.toml ]; then
   echo "Installing project in editable mode (pyproject.toml present)..."
-  "$VENV_DIR/bin/pip" install -e .
+  if ! "$VENV_DIR/bin/pip" install -e .; then
+    echo "Warning: editable install failed; continuing without editable install"
+  fi
 else
   echo "No pyproject.toml found; skipping editable install"
 fi
