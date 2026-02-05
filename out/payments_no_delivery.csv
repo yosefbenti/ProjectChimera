@@ -1,0 +1,4 @@
+payment_id,order_id,package_id,customer_id,payment_date,amount,currency,payment_status,channel,dup_group,event_id,event_time,status,city
+P1023,O5021,,C121,2026-01-29,500,ETB,PAID,CARD,O5021|500|2026-01-29,,,,
+P1024,O5022,PK9022,C122,2026-01-15,600,ETB,REFUNDED,CARD,O5022|600|2026-01-15,,,,
+P1025,O5023,PK9023,C123,2026-01-10,750,ETB,PAID,CARD,O5023|750|2026-01-10,,,,
