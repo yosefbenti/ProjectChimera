@@ -1,0 +1,20 @@
+name: CodeRabbit AI Review Policy
+version: 1
+policies:
+  - id: spec_alignment
+    description: "Verify code changes align with `specs/technical.md` API contracts and ERD."
+    checks:
+      - type: contains
+        target: "specs/technical.md"
+      - type: ensure-tests
+        message: "Pull requests must include/update tests for changed behavior."
+
+  - id: security_vulnerabilities
+    description: "Surface obvious security issues (secrets, unsafe shell usage, open redirects)."
+    checks:
+      - type: secret-scan
+      - type: shell-safety
+
+reporting:
+  on: pull_request
+  reviewer: code_rabbit
